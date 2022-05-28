@@ -1,0 +1,10 @@
+﻿
+@{
+    ViewData["Title"] = "UserList";
+    Layout = "~/Views/Shared/_LayoutView.cshtml";
+}
+<div class="card-header border-0">
+    <h3 class="mb-0">Kullanıcı Listesi</h3>
+</div>
+
+@await Component.InvokeAsync("UserList")

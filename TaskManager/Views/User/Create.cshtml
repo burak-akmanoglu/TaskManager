@@ -1,0 +1,24 @@
+﻿@using EntityLayer.Concrete
+@model User
+
+<div>
+    <h3 class="mb-0">Günlük Görev Ekleme</h3>
+</div>
+@using (Html.BeginForm("Create", "User", FormMethod.Post))
+{
+    <br />
+    @Html.Label("Email")
+    @Html.TextBoxFor(ba => ba.UserEmail, new { @class = "form-control" })
+
+    @Html.Label("İsim")
+    @Html.TextBoxFor(ba => ba.UserName, new { @class = "form-control" })
+
+    <br />
+    @Html.Label("Soyisim")
+    @Html.TextBoxFor(ba => ba.UserSurname, new { @class = "form-control" })
+    <br />
+    @Html.Label("Password")
+    @Html.TextBoxFor(ba => ba.UserPassword, new { @class = "form-control" })
+
+    <button class="btn btn-info">Kaydet</button>
+}

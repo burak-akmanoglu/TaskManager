@@ -1,0 +1,33 @@
+﻿@using EntityLayer.Concrete
+@model List<Month>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Ay</th>
+            <th>İçerik</th>
+            <th>Bitiş</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+
+
+        <tr>
+            <td>@item.MonthTime</td>
+
+            <td>@item.MonthTaskContent</td>
+
+            <td>@item.MonthTaskFinishTime</td>
+            <td><a href="~/Month/Delete/@item.MonthID" class="btn btn-outline-danger">Sil</a></td>
+            <td><a href="~/Month/Details/@item.MonthID" class="btn btn-outline-danger">Güncelle</a></td>
+        </tr>
+        }
+    </tbody>
+
+</table>
+<a href="~/Month/Create/" class="btn btn-outline-danger">Ekle</a>

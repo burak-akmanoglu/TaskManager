@@ -1,0 +1,24 @@
+﻿@using EntityLayer.Concrete
+@model User
+
+<div class="card-header border-0">
+    <h3 class="mb-0">Kullanıcı Düzenleme Tablosu</h3>
+</div>
+@using (Html.BeginForm("Edit", "User", FormMethod.Post))
+{
+    @Html.HiddenFor(ba => ba.UserID)
+    <br />
+    @Html.Label("Kullanıcı Adı")
+    @Html.TextBoxFor(ba => ba.UserName, new { @class = "form-control" })
+    <br />
+    @Html.Label("Kullanıcı Soyad")
+    @Html.TextBoxFor(ba => ba.UserSurname, new { @class = "form-control" })
+    <br />
+    @Html.Label("Kullanıcı Email")
+    @Html.TextBoxFor(ba => ba.UserEmail, new { @class = "form-control" })
+    <br />
+    @Html.Label("Kullanıcı PassWord")
+    @Html.TextBoxFor(ba => ba.UserPassword, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Kaydet</button>
+}

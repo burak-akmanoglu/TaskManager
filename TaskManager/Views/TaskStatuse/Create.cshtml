@@ -1,0 +1,14 @@
+﻿@using EntityLayer.Concrete
+@model TaskStatuse
+
+<div>
+    <h3 class="mb-0"> Ekleme</h3>
+</div>
+@using (Html.BeginForm("Create", "TaskStatuse", FormMethod.Post))
+{
+
+    @Html.Label(" Başlığı")
+    @Html.TextBoxFor(ba => ba.TaskStatuseName, new { @class = "form-control" })
+
+    <button class="btn btn-info">Kaydet</button>
+}

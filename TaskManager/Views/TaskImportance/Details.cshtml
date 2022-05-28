@@ -1,0 +1,15 @@
+﻿@using EntityLayer.Concrete
+@model TaskImportance
+
+<div class="card-header border-0">
+    <h3 class="mb-0">Servis Düzenleme Tablosu</h3>
+</div>
+@using (Html.BeginForm("Edit", "TaskImportance", FormMethod.Post))
+{
+    @Html.HiddenFor(ba => ba.TaskImportanceID)
+    <br />
+    @Html.Label("Ad")
+    @Html.TextBoxFor(ba => ba.TaskImportanceName, new { @class = "form-control" })
+    
+    <button class="btn btn-success">Kaydet</button>
+}

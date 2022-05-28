@@ -1,0 +1,18 @@
+﻿@using EntityLayer.Concrete
+@model Week
+
+<div class="card-header border-0">
+    <h3 class="mb-0">Servis Düzenleme Tablosu</h3>
+</div>
+@using (Html.BeginForm("Edit", "Week", FormMethod.Post))
+{
+    @Html.HiddenFor(ba => ba.WeekID)
+    <br />
+    @Html.Label("Hafta")
+    @Html.TextBoxFor(ba => ba.WeekTime, new { @class = "form-control" })
+    <br />
+    @Html.Label("İçerik")
+    @Html.TextBoxFor(ba => ba.WeekTaskContent, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Kaydet</button>
+}

@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_LayoutView.cshtml";
+}
+@using EntityLayer.Concrete
+@model User
+
+<form method="post" class="form-group">
+    <div>
+        <label>User Email</label>
+        <input type="text" name="UserEmail" class="form-control" placeholder="UserEmail" required maxlength="50" />
+    </div>
+    
+    <div>
+        <label>Password</label>
+        <input type="password" name="UserPassword" class="form-control" placeholder="UserPassword" required maxlength="50" />
+    </div>
+
+    <div style="margin-top:15px">
+     <input type="submit" value="Login" />
+     </div>
+</form>

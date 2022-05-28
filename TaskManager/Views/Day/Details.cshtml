@@ -1,0 +1,18 @@
+﻿@using EntityLayer.Concrete
+@model Day
+
+<div class="card-header border-0">
+    <h3 class="mb-0">Servis Düzenleme Tablosu</h3>
+</div>
+@using (Html.BeginForm("Edit", "Day", FormMethod.Post))
+{
+    @Html.HiddenFor(ba => ba.DayId)
+    <br />
+    @Html.Label("Gün")
+    @Html.TextBoxFor(ba => ba.DayTime, new { @class = "form-control" })
+    <br />
+    @Html.Label("İçerik")
+    @Html.TextBoxFor(ba => ba.DayTaskContent, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Kaydet</button>
+}

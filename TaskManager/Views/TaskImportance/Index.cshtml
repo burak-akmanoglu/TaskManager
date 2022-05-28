@@ -1,0 +1,30 @@
+﻿@using EntityLayer.Concrete
+@model List<TaskImportance>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Ad</th>
+            
+            <th>Sil</th>
+            <th>Güncelle</th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+
+
+            <tr>
+                <td>@item.TaskImportanceName</td>
+
+               
+                <td><a href="~/TaskImportance/Delete/@item.TaskImportanceID" class="btn btn-outline-danger">Sil</a></td>
+                <td><a href="~/TaskImportance/Details/@item.TaskImportanceID" class="btn btn-outline-danger">Güncelle</a></td>
+            </tr>
+        }
+    </tbody>
+
+</table>
+<a href="~/TaskImportance/Create/" class="btn btn-outline-danger">Ekle</a>

@@ -1,0 +1,18 @@
+﻿@using EntityLayer.Concrete
+@model Month
+
+<div class="card-header border-0">
+    <h3 class="mb-0">Servis Düzenleme Tablosu</h3>
+</div>
+@using (Html.BeginForm("Edit", "Month", FormMethod.Post))
+{
+    @Html.HiddenFor(ba => ba.MonthID)
+    <br />
+    @Html.Label("Ay")
+    @Html.TextBoxFor(ba => ba.MonthTime, new { @class = "form-control" })
+    <br />
+    @Html.Label("İçerik")
+    @Html.TextBoxFor(ba => ba.MonthTaskContent, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Kaydet</button>
+}

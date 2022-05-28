@@ -1,0 +1,24 @@
+﻿@using EntityLayer.Concrete
+@model Admin
+
+<div>
+    <h3 class="mb-0">Admin Ekleme</h3>
+</div>
+@using (Html.BeginForm("Create", "Admin", FormMethod.Post))
+{
+
+    @Html.Label("Ad")
+    @Html.TextBoxFor(ba => ba.AdminName, new { @class = "form-control" })
+
+    <br />
+    @Html.Label("Soyad")
+    @Html.TextBoxFor(ba => ba.AdminSurname, new { @class = "form-control" })
+
+    <br />
+    @Html.Label("Email")
+    @Html.TextBoxFor(ba => ba.AdminEmail, new { @class = "form-control" })
+    <br />
+    @Html.Label("Password")
+    @Html.TextBoxFor(ba => ba.AdminPassword, new { @class = "form-control" })
+    <button class="btn btn-info">Kaydet</button>
+}

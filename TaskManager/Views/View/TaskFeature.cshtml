@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewData["Title"] = "TaskFeature";
+    Layout = "~/Views/Shared/_LayoutView.cshtml";
+}
+<div class="card-header border-0">
+    <h3 class="mb-0">Görev Nitelikleri</h3>
+</div>
+<div class="row">
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Görevlerin Önem Ölçeği</h5>
+                @await Component.InvokeAsync("TaskImportanceList")
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Görevlerin Durum Bilgisi</h5>
+                @await Component.InvokeAsync("TaskStatuseList")
+            </div>
+        </div>
+    </div>
+</div>
+

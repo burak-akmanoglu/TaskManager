@@ -1,0 +1,30 @@
+﻿@using EntityLayer.Concrete
+@model List<Day>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Gün</th>
+            <th>Yapılacak</th>
+      
+
+
+
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+
+
+            <tr>
+                <td>@item.DayTime</td>
+
+                <td>@item.DayTaskContent</td>
+
+
+            </tr>
+        }
+    </tbody>
+
+</table>

@@ -1,0 +1,26 @@
+﻿@using EntityLayer.Concrete
+@model List<TaskImportance>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Adı</th>
+           
+
+
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+
+
+            <tr>
+                <td>@item.TaskImportanceName</td>
+
+
+            </tr>
+        }
+    </tbody>
+
+</table>

@@ -1,0 +1,31 @@
+﻿@using EntityLayer.Concrete
+@model List<User>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Ad</th>
+            <th>SoyAd</th>
+            <th>Email</th>
+
+
+
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+
+
+            <tr>
+                <td>@item.UserName</td>
+
+                <td>@item.UserSurname</td>
+
+                <td>@item.UserEmail</td>
+
+            </tr>
+        }
+    </tbody>
+
+</table>

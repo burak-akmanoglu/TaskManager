@@ -1,0 +1,15 @@
+﻿@using EntityLayer.Concrete
+@model TaskImportance
+
+<div>
+    <h3 class="mb-0">Günlük Görev Ekleme</h3>
+</div>
+@using (Html.BeginForm("Create", "TaskImportance", FormMethod.Post))
+{
+
+    @Html.Label("Başlığı")
+    @Html.TextBoxFor(ba => ba.TaskImportanceName, new { @class = "form-control" })
+
+  
+    <button class="btn btn-info">Kaydet</button>
+}

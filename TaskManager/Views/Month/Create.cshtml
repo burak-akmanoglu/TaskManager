@@ -1,0 +1,18 @@
+﻿@using EntityLayer.Concrete
+@model Month
+
+<div>
+    <h3 class="mb-0">Haftalık Görev Ekleme</h3>
+</div>
+@using (Html.BeginForm("Create", "Month", FormMethod.Post))
+{
+
+    @Html.Label("AY")
+    @Html.TextBoxFor(ba => ba.MonthTime, new { @class = "form-control" })
+
+    <br />
+    @Html.Label("İçerik")
+    @Html.TextBoxFor(ba => ba.MonthTaskContent, new { @class = "form-control" })
+
+    <button class="btn btn-info">Kaydet</button>
+}

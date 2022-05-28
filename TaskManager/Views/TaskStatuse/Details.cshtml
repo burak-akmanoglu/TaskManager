@@ -1,0 +1,15 @@
+﻿@using EntityLayer.Concrete
+@model TaskStatuse
+
+<div class="card-header border-0">
+    <h3 class="mb-0">Servis Düzenleme Tablosu</h3>
+</div>
+@using (Html.BeginForm("Edit", "TaskStatuse", FormMethod.Post))
+{
+    @Html.HiddenFor(ba => ba.TaskStatuseID)
+    <br />
+    @Html.Label("Name")
+    @Html.TextBoxFor(ba => ba.TaskStatuseName, new { @class = "form-control" })
+  
+    <button class="btn btn-success">Kaydet</button>
+}
