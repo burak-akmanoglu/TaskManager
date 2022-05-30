@@ -9,5 +9,6 @@ namespace BusinessLayer.Abstract
 {
     public interface IDayService:IGenericService<Day>
     {
+        List<Day> GetListDay();
     }
 }

@@ -1,5 +1,7 @@
 ﻿using DataAccessLayer.Abstract;
 using DataAccessLayer.Concrete;
+using EntityLayer.Concrete;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,6 +31,8 @@ namespace DataAccessLayer.Repository
             return db.Set<T>().ToList();
         }
 
+        
+
         public void Insert(T t)
         {
             using var db = new Context();
@@ -42,5 +46,10 @@ namespace DataAccessLayer.Repository
             db.Update(t);
             db.SaveChanges();
         }
+     
+       
+        
+        
+       
     }
 }

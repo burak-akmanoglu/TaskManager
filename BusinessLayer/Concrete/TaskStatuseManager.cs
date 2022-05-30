@@ -17,6 +17,11 @@ namespace BusinessLayer.Concrete
             _taskStatuseDal = TaskStatuseDal;
         }
 
+        public List<Day> GetListDayWithUser()
+        {
+            throw new NotImplementedException();
+        }
+
         public void TAdd(TaskStatuse t)
         {
             _taskStatuseDal.Insert(t);

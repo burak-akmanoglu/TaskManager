@@ -1,30 +1,33 @@
 ﻿@using EntityLayer.Concrete
 @model List<TaskImportance>
-<table class="table table-bordered">
-    <thead>
-        <tr>
-            <th>Ad</th>
-            
-            <th>Sil</th>
-            <th>Güncelle</th>
-
-
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-
-
+    <div>
+        <h3 class="mb-0">Görev Önem Düzeyi</h3>
+    </div>
+    <table class="table table-dark table-striped">
+        <thead>
             <tr>
-                <td>@item.TaskImportanceName</td>
+                <th>Ad</th>
 
-               
-                <td><a href="~/TaskImportance/Delete/@item.TaskImportanceID" class="btn btn-outline-danger">Sil</a></td>
-                <td><a href="~/TaskImportance/Details/@item.TaskImportanceID" class="btn btn-outline-danger">Güncelle</a></td>
+                <th>Sil</th>
+                <th>Güncelle</th>
+
+
             </tr>
-        }
-    </tbody>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
 
-</table>
-<a href="~/TaskImportance/Create/" class="btn btn-outline-danger">Ekle</a>
+
+                <tr>
+                    <td>@item.TaskImportanceName</td>
+
+
+                    <td><a href="~/TaskImportance/Delete/@item.TaskImportanceID" class="btn btn-outline-danger">Sil</a></td>
+                    <td><a href="~/TaskImportance/Details/@item.TaskImportanceID" class="btn btn-outline-info">Güncelle</a></td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+    <a href="~/TaskImportance/Create/" class="btn btn-outline-success">Ekle</a>

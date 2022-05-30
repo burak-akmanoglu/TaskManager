@@ -9,5 +9,7 @@ namespace BusinessLayer.Abstract
 {
     public interface IMonthService:IGenericService<Month>
     {
+
+        List<Month> GetListMonth();
     }
 }

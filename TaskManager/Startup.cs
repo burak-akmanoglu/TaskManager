@@ -53,7 +53,7 @@ namespace TaskManager
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=View}/{action=Index}/{id?}");
+                    pattern: "{controller=View}/{action=Day}/{id?}");
             });
         }
     }

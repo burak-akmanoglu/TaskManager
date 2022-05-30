@@ -14,7 +14,6 @@ namespace DataAccessLayer.Concrete
         {
             optionsBuilder.UseSqlServer("server=BURAK\\SQLEXPRESS;database=TaskManager;integrated security=true");
         }
-        public DbSet<Admin> TblAdmin { get; set; }
         public DbSet<Day> TblDay { get; set; }
         public DbSet<Month> TblMonth { get; set; }
         public DbSet<TaskImportance> TblTaskImportance { get; set; }

@@ -13,6 +13,9 @@ namespace EntityLayer.Concrete
         public int TaskImportanceID { get; set; }
         public string TaskImportanceName { get; set; }
 
+        public List<Day> Day { get; set; }
+        public List<Week> Week { get; set; }
+        public List<Month> Month { get; set; }
 
 
     }

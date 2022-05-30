@@ -17,6 +17,11 @@ namespace BusinessLayer.Concrete
             _userDal = UserDal;
         }
 
+        public List<Day> GetListDayWithUser()
+        {
+            throw new NotImplementedException();
+        }
+
         public void TAdd(User t)
         {
             _userDal.Insert(t);

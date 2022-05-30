@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EntityLayer.Concrete;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,5 +14,6 @@ namespace DataAccessLayer.Abstract
         void Update(T t);
         List<T> GetList();
         T GetById(int id);
+     
     }
 }

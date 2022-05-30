@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "fZ+JbuVWBWLEhtS67J6GgyU5Jiw1NR1qpXv+njOmSrAyLjC6dQVITi2EqcbsGAuZt728OeBhz2kZ+dtlKM827w==",
+  "dgSpecHash": "H/OhN8kFYB85VOAAejoVzh5pmgurXpcGwTD7po1YqljfPA/m3inv0O4itNx41QPgKZYPCLOu8qVhdTwqwE8QAg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Burak Akmanoğlu\\source\\repos\\TaskManager\\BusinessLayer\\BusinessLayer.csproj",
   "expectedPackageFiles": [
@@ -29,6 +29,7 @@
     "C:\\Users\\Burak Akmanoğlu\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\5.0.17\\microsoft.entityframeworkcore.abstractions.5.0.17.nupkg.sha512",
     "C:\\Users\\Burak Akmanoğlu\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\5.0.17\\microsoft.entityframeworkcore.analyzers.5.0.17.nupkg.sha512",
     "C:\\Users\\Burak Akmanoğlu\\.nuget\\packages\\microsoft.entityframeworkcore.design\\5.0.17\\microsoft.entityframeworkcore.design.5.0.17.nupkg.sha512",
+    "C:\\Users\\Burak Akmanoğlu\\.nuget\\packages\\microsoft.entityframeworkcore.inmemory\\5.0.17\\microsoft.entityframeworkcore.inmemory.5.0.17.nupkg.sha512",
     "C:\\Users\\Burak Akmanoğlu\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\5.0.17\\microsoft.entityframeworkcore.relational.5.0.17.nupkg.sha512",
     "C:\\Users\\Burak Akmanoğlu\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\5.0.17\\microsoft.entityframeworkcore.sqlserver.5.0.17.nupkg.sha512",
     "C:\\Users\\Burak Akmanoğlu\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\5.0.17\\microsoft.entityframeworkcore.tools.5.0.17.nupkg.sha512",

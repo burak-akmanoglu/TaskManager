@@ -2,7 +2,7 @@
 @model Day
 
 <div class="card-header border-0">
-    <h3 class="mb-0">Servis Düzenleme Tablosu</h3>
+    <h3 class="mb-0">Günlük Görev Düzenleme</h3>
 </div>
 @using (Html.BeginForm("Edit", "Day", FormMethod.Post))
 {
@@ -14,5 +14,17 @@
     @Html.Label("İçerik")
     @Html.TextBoxFor(ba => ba.DayTaskContent, new { @class = "form-control" })
     <br />
+   
+    @Html.Label("Kullanıcı")
+    @Html.DropDownListFor(ba => ba.UserID, (List<SelectListItem>)ViewBag.Us, new { @class = "form-control" })
+
+    <br />
+    @Html.Label("Önem")
+    @Html.DropDownListFor(ba => ba.TaskImportanceID, (List<SelectListItem>)ViewBag.tm, new { @class = "form-control" })
+
+    <br />
+    @Html.Label("Durum")
+    @Html.DropDownListFor(ba => ba.TaskStatuseID, (List<SelectListItem>)ViewBag.ts, new { @class = "form-control" })
+
     <button class="btn btn-success">Kaydet</button>
 }

@@ -2,12 +2,12 @@
 @model User
 
 <div>
-    <h3 class="mb-0">Günlük Görev Ekleme</h3>
+    <h3 class="mb-0">Yeni Kullanıcı Kaydı</h3>
 </div>
 @using (Html.BeginForm("Create", "User", FormMethod.Post))
 {
     <br />
-    @Html.Label("Email")
+    @Html.Label("E-mail")
     @Html.TextBoxFor(ba => ba.UserEmail, new { @class = "form-control" })
 
     @Html.Label("İsim")

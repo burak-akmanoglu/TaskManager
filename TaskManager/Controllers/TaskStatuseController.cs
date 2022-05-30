@@ -19,6 +19,7 @@ namespace TaskManager.Controllers
             var values = _taskStatuse.TGetList();
             return View(values);
         }
+        [Authorize]
         [HttpGet]
         public IActionResult Create()
         {
@@ -36,6 +37,7 @@ namespace TaskManager.Controllers
             _taskStatuse.TDelete(values);
             return RedirectToAction("Index");
         }
+        [Authorize]
         [HttpGet]
         public IActionResult Details(int id)
         {

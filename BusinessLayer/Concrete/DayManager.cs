@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Microsoft.EntityFrameworkCore;
 namespace BusinessLayer.Concrete
 {
     public class DayManager:IDayService
@@ -34,12 +34,19 @@ namespace BusinessLayer.Concrete
 
         public List<Day> TGetList()
         {
+          
             return _dayDal.GetList();
         }
 
         public void TUpdate(Day t)
         {
             _dayDal.Update(t);
+        }
+        
+
+        public List<Day> GetListDay()
+        {
+            return _dayDal.GetListDay();
         }
     }
 }

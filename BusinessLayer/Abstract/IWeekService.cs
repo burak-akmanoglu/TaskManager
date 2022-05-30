@@ -9,5 +9,6 @@ namespace BusinessLayer.Abstract
 {
    public interface IWeekService:IGenericService<Week>
     {
+        List<Week> GetListWeek();
     }
 }

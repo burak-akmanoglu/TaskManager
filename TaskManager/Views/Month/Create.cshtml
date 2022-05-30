@@ -7,12 +7,31 @@
 @using (Html.BeginForm("Create", "Month", FormMethod.Post))
 {
 
-    @Html.Label("AY")
+    <br />
+    <div>
+        @Html.Label((DateTime.Now.ToString("MM"))) .Aydayız
+    </div>
+    @Html.Label("Ay")
+
+
+
     @Html.TextBoxFor(ba => ba.MonthTime, new { @class = "form-control" })
 
     <br />
-    @Html.Label("İçerik")
+    @Html.Label("Görev")
     @Html.TextBoxFor(ba => ba.MonthTaskContent, new { @class = "form-control" })
 
+    <br />
+    @Html.Label("Kullanıcı")
+    @Html.DropDownListFor(ba => ba.UserID, (List<SelectListItem>)ViewBag.Us, new { @class = "form-control" })
+
+    <br />
+    @Html.Label("Önem")
+    @Html.DropDownListFor(ba => ba.TaskImportanceID, (List<SelectListItem>)ViewBag.tm, new { @class = "form-control" })
+
+
+    @Html.Label("Durum")
+    @Html.DropDownListFor(ba => ba.TaskStatuseID, (List<SelectListItem>)ViewBag.ts, new { @class = "form-control" })
+    <br />
     <button class="btn btn-info">Kaydet</button>
 }

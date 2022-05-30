@@ -13,7 +13,7 @@ namespace TaskManager.ViewComponents.Month
         MonthManager monthManager = new MonthManager(new EfMonthDal());
         public IViewComponentResult Invoke()
         {
-            var values = monthManager.TGetList();
+            var values = monthManager.GetListMonth();
             return View(values);
         }
     }

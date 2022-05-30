@@ -17,6 +17,11 @@ namespace BusinessLayer.Concrete
             _taskImportanceDal = TaskImportanceDal;
         }
 
+        public List<Day> GetListDayWithUser()
+        {
+            throw new NotImplementedException();
+        }
+
         public void TAdd(TaskImportance t)
         {
             _taskImportanceDal.Insert(t);

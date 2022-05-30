@@ -38,6 +38,7 @@ namespace TaskManager.Controllers
 
             return RedirectToAction("Index");
         }
+        [Authorize]
         [HttpGet]
         public IActionResult Details(int id)
         {

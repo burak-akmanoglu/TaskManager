@@ -13,6 +13,18 @@
     <br />
     @Html.Label("İçerik")
     @Html.TextBoxFor(ba => ba.MonthTaskContent, new { @class = "form-control" })
+  
     <br />
+    @Html.Label("Kullanıcı")
+    @Html.DropDownListFor(ba => ba.UserID, (List<SelectListItem>)ViewBag.Us, new { @class = "form-control" })
+
+    <br />
+    @Html.Label("Önem")
+    @Html.DropDownListFor(ba => ba.TaskImportanceID, (List<SelectListItem>)ViewBag.tm, new { @class = "form-control" })
+
+    <br />
+    @Html.Label("Durum")
+    @Html.DropDownListFor(ba => ba.TaskStatuseID, (List<SelectListItem>)ViewBag.ts, new { @class = "form-control" })
+
     <button class="btn btn-success">Kaydet</button>
 }

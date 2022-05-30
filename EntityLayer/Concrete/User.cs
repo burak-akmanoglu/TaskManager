@@ -16,5 +16,10 @@ namespace EntityLayer.Concrete
         public string UserEmail { get; set; }
         public string UserPassword { get; set; }
 
+        public List<Day> Day { get; set; }
+        public List<Week> Week { get; set; }
+        public List<Month> Month { get; set; }
+
+
     }
 }

@@ -9,5 +9,6 @@ namespace DataAccessLayer.Abstract
 {
     public interface IMonthDal : IGenericDal<Month>
     {
+        List<Month> GetListMonth();
     }
 }

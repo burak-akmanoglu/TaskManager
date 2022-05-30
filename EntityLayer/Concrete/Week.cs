@@ -14,7 +14,19 @@ namespace EntityLayer.Concrete
         public int WeekID { get; set; }
         public int WeekTime { get; set; }
         public string WeekTaskContent { get; set; }
-        public string WeekTaskFinishTime { get; set; }
+      
 
+
+        [ForeignKey("User")]
+        public int? UserID { get; set; }
+        public virtual User User { get; set; }
+
+        [ForeignKey("TaskImportance")]
+        public int? TaskImportanceID { get; set; }
+        public virtual TaskImportance TaskImportance { get; set; }
+
+        [ForeignKey("TaskStatuse")]
+        public int? TaskStatuseID { get; set; }
+        public virtual TaskStatuse TaskStatuse { get; set; }
     }
 }

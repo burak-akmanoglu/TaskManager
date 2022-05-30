@@ -17,6 +17,13 @@ namespace BusinessLayer.Concrete
             _weekDal = WeekDal;
         }
 
+      
+
+        public List<Week> GetListWeek()
+        {
+            return _weekDal.GetListWeek();
+        }
+
         public void TAdd(Week t)
         {
             _weekDal.Insert(t);

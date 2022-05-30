@@ -9,5 +9,6 @@ namespace DataAccessLayer.Abstract
 {
    public interface IWeekDal : IGenericDal<Week>
     {
+        List<Week> GetListWeek();
     }
 }

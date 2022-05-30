@@ -13,7 +13,7 @@ namespace TaskManager.ViewComponents.Week
         WeekManager weekManager = new WeekManager(new EfWeekDal());
         public IViewComponentResult Invoke()
         {
-            var values = weekManager.TGetList();
+            var values = weekManager.GetListWeek();
             return View(values);
         }
     }

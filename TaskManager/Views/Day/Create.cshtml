@@ -7,12 +7,28 @@
 @using (Html.BeginForm("Create", "Day", FormMethod.Post))
 {
 
-    @Html.Label("Hizmet Başlığı")
+    @Html.Label("Gün ")
+    <div>
+        @Html.Label((DateTime.Now.DayOfYear.ToString())) .Gündeyiz
+    </div>
+
+
     @Html.TextBoxFor(ba => ba.DayTime, new { @class = "form-control" })
 
     <br />
-    @Html.Label("Görsel Yolu")
+    @Html.Label("Görev")
     @Html.TextBoxFor(ba => ba.DayTaskContent, new { @class = "form-control" })
+    <br />
+    @Html.Label("Kullanıcı")
+    @Html.DropDownListFor(ba => ba.UserID, (List<SelectListItem>)ViewBag.Us, new { @class = "form-control" })
+
+    <br />
+    @Html.Label("Önem")
+    @Html.DropDownListFor(ba => ba.TaskImportanceID, (List<SelectListItem>)ViewBag.tm, new { @class = "form-control" })
+
+    <br />
+    @Html.Label("Durum")
+    @Html.DropDownListFor(ba => ba.TaskStatuseID, (List<SelectListItem>)ViewBag.ts, new { @class = "form-control" })
 
     <button class="btn btn-info">Kaydet</button>
 }

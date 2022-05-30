@@ -17,6 +17,13 @@ namespace BusinessLayer.Concrete
             _monthDal = MonthDal;
         }
 
+        
+
+        public List<Month> GetListMonth()
+        {
+            return _monthDal.GetListMonth();
+        }
+
         public void TAdd(Month t)
         {
             _monthDal.Insert(t);
@@ -41,5 +48,7 @@ namespace BusinessLayer.Concrete
         {
              _monthDal.Update(t);
         }
+      
+       
     }
 }

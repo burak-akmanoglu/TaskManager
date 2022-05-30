@@ -15,7 +15,7 @@ namespace TaskManager.ViewComponents.Day
         public IViewComponentResult Invoke()
         {
             
-            var values = dayManager.TGetList();
+            var values = dayManager.GetListDay();
             return View(values);
         }
     }

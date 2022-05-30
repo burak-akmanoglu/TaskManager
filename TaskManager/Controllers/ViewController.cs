@@ -10,14 +10,8 @@ namespace TaskManager.Controllers
 {
     public class ViewController : Controller
     {
-        public IActionResult Index()
-        {
-            return View();
-        }
-        public IActionResult Admin()
-        {
-            return View();
-        }
+       
+        
         public IActionResult TaskFeature()
         {
             return View();
