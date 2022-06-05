@@ -9,7 +9,8 @@
 
     @Html.Label("Başlığı")
     @Html.TextBoxFor(ba => ba.TaskImportanceName, new { @class = "form-control" })
+    @Html.ValidationMessageFor(ba => ba.TaskImportanceName)
 
-  
+
     <button class="btn btn-info">Kaydet</button>
 }

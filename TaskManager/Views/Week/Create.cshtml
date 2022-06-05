@@ -7,14 +7,16 @@
 @using (Html.BeginForm("Create", "Week", FormMethod.Post))
 {
 
-<div>   @Html.Label((((DateTime.Now.DayOfYear) / 7) + 1).ToString()) .Haftadayız</div>
+    <div>   @Html.Label((((DateTime.Now.DayOfYear) / 7) + 1).ToString()) .Haftadayız</div>
 
     @Html.Label("Hafta")
     @Html.TextBoxFor(ba => ba.WeekTime, new { @class = "form-control" })
+    @Html.ValidationMessageFor(ba => ba.WeekTime)
 
     <br />
     @Html.Label("İçerik")
     @Html.TextBoxFor(ba => ba.WeekTaskContent, new { @class = "form-control" })
+    @Html.ValidationMessageFor(ba => ba.WeekTaskContent)
     <br />
     @Html.Label("Kullanıcı")
     @Html.DropDownListFor(ba => ba.UserID, (List<SelectListItem>)ViewBag.Us, new { @class = "form-control" })

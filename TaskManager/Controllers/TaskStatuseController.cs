@@ -1,6 +1,8 @@
 ﻿using BusinessLayer.Concrete;
+using BusinessLayer.ValidationRules;
 using DataAccessLayer.EntityFreamework;
 using EntityLayer.Concrete;
+using FluentValidation.Results;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -28,8 +30,24 @@ namespace TaskManager.Controllers
         [HttpPost]
         public IActionResult Create(TaskStatuse taskStatuse)
         {
-            _taskStatuse.TAdd(taskStatuse);
-            return RedirectToAction("Index");
+            TaskStatuseValidator validations = new TaskStatuseValidator();
+            ValidationResult results = validations.Validate(taskStatuse);
+            if (results.IsValid)
+            {
+
+                _taskStatuse.TAdd(taskStatuse);
+                return RedirectToAction("Index");
+            }
+            else
+            {
+
+                foreach (var item in results.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+
+            }
+            return View();
         }
         public IActionResult Delete(int id)
         {
@@ -48,8 +66,25 @@ namespace TaskManager.Controllers
         [HttpPost]
         public IActionResult Edit(TaskStatuse taskStatuse)
         {
-            _taskStatuse.TUpdate(taskStatuse);
-            return RedirectToAction("Index");
+
+            TaskStatuseValidator validations = new TaskStatuseValidator();
+            ValidationResult results = validations.Validate(taskStatuse);
+            if (results.IsValid)
+            {
+                _taskStatuse.TUpdate(taskStatuse);
+                return RedirectToAction("Index");
+            }
+            else
+            {
+
+                foreach (var item in results.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+
+            }
+            return View();
+      
         }
     }
 }

@@ -16,10 +16,12 @@
 
 
     @Html.TextBoxFor(ba => ba.MonthTime, new { @class = "form-control" })
+    @Html.ValidationMessageFor(ba => ba.MonthTime)
 
     <br />
     @Html.Label("Görev")
     @Html.TextBoxFor(ba => ba.MonthTaskContent, new { @class = "form-control" })
+    @Html.ValidationMessageFor(ba => ba.MonthTaskContent)
 
     <br />
     @Html.Label("Kullanıcı")

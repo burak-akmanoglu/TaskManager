@@ -14,10 +14,14 @@
 
 
     @Html.TextBoxFor(ba => ba.DayTime, new { @class = "form-control" })
+    @Html.ValidationMessageFor(ba => ba.DayTime)
 
     <br />
     @Html.Label("Görev")
     @Html.TextBoxFor(ba => ba.DayTaskContent, new { @class = "form-control" })
+    @Html.ValidationMessageFor(ba => ba.DayTaskContent)
+
+
     <br />
     @Html.Label("Kullanıcı")
     @Html.DropDownListFor(ba => ba.UserID, (List<SelectListItem>)ViewBag.Us, new { @class = "form-control" })

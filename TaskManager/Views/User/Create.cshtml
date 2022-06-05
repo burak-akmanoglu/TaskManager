@@ -9,16 +9,19 @@
     <br />
     @Html.Label("E-mail")
     @Html.TextBoxFor(ba => ba.UserEmail, new { @class = "form-control" })
+    @Html.ValidationMessageFor(ba => ba.UserEmail)
 
     @Html.Label("İsim")
     @Html.TextBoxFor(ba => ba.UserName, new { @class = "form-control" })
+    @Html.ValidationMessageFor(ba => ba.UserName)
 
     <br />
     @Html.Label("Soyisim")
     @Html.TextBoxFor(ba => ba.UserSurname, new { @class = "form-control" })
+    @Html.ValidationMessageFor(ba => ba.UserSurname)
     <br />
     @Html.Label("Password")
     @Html.TextBoxFor(ba => ba.UserPassword, new { @class = "form-control" })
-
+    @Html.ValidationMessageFor(ba => ba.UserPassword)
     <button class="btn btn-info">Kaydet</button>
 }

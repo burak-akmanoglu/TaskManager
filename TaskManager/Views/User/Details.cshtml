@@ -10,15 +10,19 @@
     <br />
     @Html.Label("Kullanıcı Adı")
     @Html.TextBoxFor(ba => ba.UserName, new { @class = "form-control" })
+    @Html.ValidationMessageFor(ba => ba.UserName)
     <br />
     @Html.Label("Kullanıcı Soyad")
     @Html.TextBoxFor(ba => ba.UserSurname, new { @class = "form-control" })
+    @Html.ValidationMessageFor(ba => ba.UserSurname)
     <br />
     @Html.Label("Kullanıcı Email")
     @Html.TextBoxFor(ba => ba.UserEmail, new { @class = "form-control" })
+    @Html.ValidationMessageFor(ba => ba.UserEmail)
     <br />
     @Html.Label("Kullanıcı PassWord")
     @Html.TextBoxFor(ba => ba.UserPassword, new { @class = "form-control" })
+    @Html.ValidationMessageFor(ba => ba.UserPassword)
     <br />
     <button class="btn btn-success">Kaydet</button>
 }

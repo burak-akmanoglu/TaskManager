@@ -10,6 +10,7 @@
     <br />
     @Html.Label("Ad")
     @Html.TextBoxFor(ba => ba.TaskStatuseName, new { @class = "form-control" })
-  
+    @Html.ValidationMessageFor(ba => ba.TaskStatuseName)
+
     <button class="btn btn-success">Kaydet</button>
 }

@@ -1,6 +1,8 @@
 ﻿using BusinessLayer.Concrete;
+using BusinessLayer.ValidationRules;
 using DataAccessLayer.EntityFreamework;
 using EntityLayer.Concrete;
+using FluentValidation.Results;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -28,8 +30,23 @@ namespace TaskManager.Controllers
         [HttpPost]
         public IActionResult Create(TaskImportance taskImportance)
         {
-            _taskImportanceManager.TAdd(taskImportance);
-            return RedirectToAction("Index");
+            TaskImportanceValidator validations = new TaskImportanceValidator();
+            ValidationResult results = validations.Validate(taskImportance);
+            if (results.IsValid)
+            {
+                _taskImportanceManager.TAdd(taskImportance);
+                return RedirectToAction("Index");
+            }
+            else
+            {
+
+                foreach (var item in results.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+
+            }
+            return View();
         }
         public IActionResult Delete(int id)
         {
@@ -47,9 +64,24 @@ namespace TaskManager.Controllers
         }
         [HttpPost]
         public IActionResult Edit(TaskImportance taskImportance)
-        {
-            _taskImportanceManager.TUpdate(taskImportance);
-            return RedirectToAction("Index");
+        {            
+            TaskImportanceValidator validations = new TaskImportanceValidator();
+            ValidationResult results = validations.Validate(taskImportance);
+            if (results.IsValid)
+            {
+                _taskImportanceManager.TUpdate(taskImportance);
+                return RedirectToAction("Index");
+            }
+            else
+            {
+
+                foreach (var item in results.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+
+            }
+            return View();
         }
     }
 }

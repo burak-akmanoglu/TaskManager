@@ -8,6 +8,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
+using BusinessLayer.ValidationRules;
+using FluentValidation.Results;
 
 namespace TaskManager.Controllers
 {
@@ -28,8 +30,26 @@ namespace TaskManager.Controllers
         [HttpPost]
         public IActionResult Create(User user)
         {
-            _userManager.TAdd(user);
-          return RedirectToAction("Index");
+            UserValidator validations = new UserValidator();
+            ValidationResult results = validations.Validate(user);
+            if (results.IsValid)
+            {
+
+                _userManager.TAdd(user);
+                return RedirectToAction("Index");
+            }
+            else
+            {
+
+                foreach (var item in results.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+
+            }
+            return View();
+
+        
         }
         public IActionResult Delete(int id)
         {
@@ -48,8 +68,24 @@ namespace TaskManager.Controllers
         [HttpPost]
         public IActionResult Edit(User user)
         {
-            _userManager.TUpdate(user);
-            return RedirectToAction("Index");
+            UserValidator validations = new UserValidator();
+            ValidationResult results = validations.Validate(user);
+            if (results.IsValid)
+            {
+
+                _userManager.TUpdate(user);
+                return RedirectToAction("Index");
+            }
+            else
+            {
+
+                foreach (var item in results.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+
+            }
+            return View();           
 
         }
     }
